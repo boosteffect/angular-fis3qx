@@ -1,5 +1,6 @@
 export interface Entry {
   name: string;
+  desc?: string;
   id: number;
   type: 'file' | 'directory';
   time: Date;
@@ -11,10 +12,8 @@ let counter = 0;
 const nextId = () => counter++;
 
 export const filesystem: Entry[] = [
-    {type: 'file', id: nextId(), name: 'LICENSE.md', size: 636, time: new Date('2019-12-18T15:06:11')},
-    {type: 'file', id: nextId(), name: 'README.md', size: 4460, time: new Date('2019-12-18T15:06:11')},
-    {type: 'file', id: nextId(), name: 'SUPPORT.md', size: 3181, time: new Date('2019-12-18T15:06:11')},
-    {type: 'directory', id: nextId(), name: 'examples', time: new Date('2019-12-18T15:06:11'), contents: [
+
+    {type: 'directory', id: nextId(), name: 'GG_CHEF', time: new Date('2019-12-18T15:06:11'), contents: [
       {type: 'file', id: nextId(), name: 'README.md', size: 1153, time: new Date('2019-12-18T15:06:11')},
       {type: 'file', id: nextId(), name: 'angular.json', size: 37604, time: new Date('2019-12-18T15:06:11')},
       {type: 'directory', id: nextId(), name: 'bin', time: new Date('2019-12-18T15:06:11'), contents: [
@@ -580,7 +579,7 @@ export const filesystem: Entry[] = [
       {type: 'file', id: nextId(), name: 'tsconfig.json', size: 467, time: new Date('2019-12-18T15:06:11')},
       {type: 'file', id: nextId(), name: 'tslint.json', size: 1954, time: new Date('2019-12-18T15:06:11')}
     ]},
-    {type: 'directory', id: nextId(), name: 'examples-standalone', time: new Date('2019-12-18T15:06:11'), contents: [
+    {type: 'directory', id: nextId(), desc:'', name: 'GG_MISC', time: new Date('2019-12-18T15:06:11'), contents: [
       {type: 'directory', id: nextId(), name: 'angular-universal', time: new Date('2019-12-18T15:06:11'), contents: [
         {type: 'file', id: nextId(), name: 'README.md', size: 1699, time: new Date('2019-12-18T15:06:11')},
         {type: 'directory', id: nextId(), name: 'aspnet_core_sample_application', time: new Date('2019-12-18T15:06:11'), contents: [

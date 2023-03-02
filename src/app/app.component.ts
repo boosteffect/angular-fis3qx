@@ -10,13 +10,13 @@ import { filesystem, Entry } from './filesystem';
                         kendoTreeListSelectable [selectable]="settings" [(selectedItems)]="selected"
                         kendoTreeListExpandable
                         [height]="410">
-            <kendo-treelist-checkbox-column [width]="35" [checkChildren]="true" [showSelectAll]="true">
+            <kendo-treelist-checkbox-column [width]="50" [checkChildren]="true" [showSelectAll]="true">
             </kendo-treelist-checkbox-column>
-            <kendo-treelist-column [expandable]="true" field="name" title="Name" [width]="250">
+            <kendo-treelist-column [expandable]="true" field="name" title="SKU" [width]="150">
             </kendo-treelist-column>
-            <kendo-treelist-column field="type" title="Type" [width]="100">
+            <kendo-treelist-column field="desc" title="Description" >
             </kendo-treelist-column>
-            <kendo-treelist-column field="size" title="Size" [width]="200">
+            <kendo-treelist-column field="size" title="Actual Order" [width]="150">
             </kendo-treelist-column>
         </kendo-treelist>
     `
