@@ -3,8 +3,8 @@ import { SelectableSettings } from '@progress/kendo-angular-treelist';
 import { filesystem, Entry } from './filesystem';
 
 @Component({
-    selector: 'my-app',
-    template: `
+  selector: 'my-app',
+  template: `
         <h5 style="display:none">Selected rows: {{ selected.length }}</h5>
         <kendo-treelist [kendoTreeListHierarchyBinding]="data" childrenField="contents" idField="id"
                         kendoTreeListSelectable [selectable]="settings" [(selectedItems)]="selected"
@@ -16,19 +16,23 @@ import { filesystem, Entry } from './filesystem';
             </kendo-treelist-column>
             <kendo-treelist-column field="desc" title="Description" >
             </kendo-treelist-column>
-            <kendo-treelist-column field="size" title="Actual Order" [width]="150">
+            <kendo-treelist-column field="actualOrder" title="Actual Order" [width]="110">
+            </kendo-treelist-column>
+            <kendo-treelist-column field="transfered" title="Transfer" [width]="80">
+            </kendo-treelist-column>
+            <kendo-treelist-column field="qtyRemaining" title="Qty To" [width]="80">
             </kendo-treelist-column>
         </kendo-treelist>
-    `
+    `,
 })
 export class AppComponent {
-    public data: Entry[] = filesystem;
+  public data: Entry[] = filesystem;
 
-    public settings: SelectableSettings = {
-        mode: 'row',
-        multiple: true,
-        drag: false
-    };
+  public settings: SelectableSettings = {
+    mode: 'row',
+    multiple: true,
+    drag: false,
+  };
 
-    public selected: any[] = [];
+  public selected: any[] = [];
 }
