@@ -10,7 +10,7 @@ import { filesystem, Entry } from './filesystem';
                         kendoTreeListSelectable [selectable]="settings" [(selectedItems)]="selected"
                         kendoTreeListExpandable
                         [height]="410">
-            <kendo-treelist-checkbox-column [width]="35" [checkChildren]="true">
+            <kendo-treelist-checkbox-column [width]="35" [checkChildren]="true" [showSelectAll]="true">
             </kendo-treelist-checkbox-column>
             <kendo-treelist-column [expandable]="true" field="name" title="Name" [width]="250">
             </kendo-treelist-column>
