@@ -21,11 +21,6 @@ export const storeList: StoreEntry[] = [
       {
         type: 'item',
         id: nextId(),
-        store: '5401',
-      },
-      {
-        type: 'item',
-        id: nextId(),
         store: '1547',
       },
       {

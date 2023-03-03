@@ -11,7 +11,7 @@ import { storeList, storeList2, StoreEntry } from './stores';
                   [initiallyExpanded]="true"
                   kendoTreeListSelectable [selectable]="settings" [(selectedItems)]="selected"
                   kendoTreeListExpandable
-                  [height]="435">
+                  [height]="480">
             
              <kendo-treelist-checkbox-column [width]="40" [checkChildren]="true" [showSelectAll]="true">
             </kendo-treelist-checkbox-column>
@@ -30,13 +30,13 @@ import { storeList, storeList2, StoreEntry } from './stores';
             </kendo-treelist-column>
         </kendo-treelist>
 
-        <div style="width:100%; padding-top:'100px;'">
+        <div style="height:1000px; width:100%; padding-top:'10px;'">
 
         <div style="width:'300px'; float: left; ">
         <kendo-treelist [kendoTreeListHierarchyBinding]="storeData" childrenField="contents" idField="id"
                   kendoTreeListSelectable [selectable]="settings" [(selectedItems)]="selected"
                   kendoTreeListExpandable
-                  [height]="420"
+                  [height]="480"
                   >
             <kendo-treelist-checkbox-column [width]="40" [checkChildren]="true" [showSelectAll]="true">
             </kendo-treelist-checkbox-column>
@@ -55,7 +55,7 @@ import { storeList, storeList2, StoreEntry } from './stores';
         <kendo-treelist [kendoTreeListHierarchyBinding]="storeData2" childrenField="contents" idField="id"
                   kendoTreeListSelectable [selectable]="settings" [(selectedItems)]="selected"
                   kendoTreeListExpandable
-                  [height]="420"
+                  [height]="545"
                   >
             <kendo-treelist-checkbox-column [width]="40" [checkChildren]="true" [showSelectAll]="true">
             </kendo-treelist-checkbox-column>
