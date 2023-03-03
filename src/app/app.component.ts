@@ -28,17 +28,19 @@ import { storeList, StoreEntry } from './stores';
 
         <div style="padding-top:'100px;'"></div>
 
-        <div style="width:200px;">
+        <div style="width:'300px';">
         <kendo-treelist [kendoTreeListHierarchyBinding]="storeData" childrenField="contents" idField="id"
-                  [initiallyExpanded]="true"
                   kendoTreeListSelectable [selectable]="settings" [(selectedItems)]="selected"
                   kendoTreeListExpandable
                   [height]="420"
                   >
             <kendo-treelist-checkbox-column [width]="40" [checkChildren]="true" [showSelectAll]="true">
             </kendo-treelist-checkbox-column>
-            <kendo-treelist-column [expandable]="true" field="name" title="Stores" class="text-right" >
+            <kendo-treelist-column [expandable]="true" field="warehouse" title="Dist Warehouse"  [width]="170">
             </kendo-treelist-column>
+            <kendo-treelist-column field="store" title="Store" class="text-right" >
+            </kendo-treelist-column>
+ 
         </kendo-treelist>
         </div>
      `,
