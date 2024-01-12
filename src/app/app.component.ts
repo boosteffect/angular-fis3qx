@@ -74,7 +74,40 @@ import { storeList, storeList2, StoreEntry } from './stores';
         </kendo-treelist>
         </div>
         </div>
+
+        <div style="height:1000px; width:100%; padding-top:'50px;'">
+
+        <kendo-treelist [kendoTreeListHierarchyBinding]="data" childrenField="contents" idField="id"
+                  [initiallyExpanded]="true"
+                  kendoTreeListSelectable [selectable]="settings" [(selectedItems)]="selected"
+                  kendoTreeListExpandable [filterable]="true"
+                  [filter]="itemfilter"
+                  [height]="480">
+            
+             <kendo-treelist-checkbox-column [width]="40" [checkChildren]="true" [showSelectAll]="true">
+            </kendo-treelist-checkbox-column>
+            
+            <kendo-treelist-column [expandable]="true" field="name" title="SKU" [width]="140">
+            </kendo-treelist-column>
+            
+            <kendo-treelist-column field="desc" title="Description" >
+            </kendo-treelist-column>
+            
+            <kendo-treelist-column field="actualOrder" title="Production Qty" [width]="120" [filterable]="false" class="text-right"  [headerStyle]="{'white-space': 'pre-wrap'}">
+            </kendo-treelist-column>
+            <kendo-treelist-column field="transfered" title="Transferred Qty" [width]="130" class="text-right" [filterable]="false"  [headerStyle]="{'white-space': 'pre-wrap' }">
+            </kendo-treelist-column>
+        </kendo-treelist>
+
+
       `,
+      styles: [
+        `
+          .k-grid .k-column-title {
+            white-space: normal;
+          }
+        `,
+      ],
 })
 export class AppComponent {
   public data: Entry[] = filesystem;
