@@ -25,8 +25,8 @@ export const filesystem: Entry[] = [
         name: '267213',
         size: 267213,
         desc: 'PBX G&G Side Mac & Cheese Gouda',
-        actualOrder: 500,
-        transfered: 617,
+        actualOrder: 1117,
+        transfered: 0,
         qtyRemaining: 1112,
       },
       {
@@ -35,8 +35,8 @@ export const filesystem: Entry[] = [
         name: '267221',
         size: 267221,
         desc: 'PBX G&G Side Mac & Cheese',
-        actualOrder: 0,
-        transfered: 1611,
+        actualOrder: 1611,
+        transfered: 0,
         qtyRemaining: 1611,
       },
       {
